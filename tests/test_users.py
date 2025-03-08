@@ -1,12 +1,12 @@
 import pytest
 import requests
 import random
-from conftest import BASE_URL
+from conftest import BASE_URL_MAGENTO
 
 pytest.mark.usefixtures("generate_unique_email")
 def test_user_registration(generate_unique_email):
     """Test case for registering a new user."""
-    endpoint = f"{BASE_URL}/customers"
+    endpoint = f"{BASE_URL_MAGENTO}/customers"
     payload = {
         "customer": {
             "firstname": "Test",
@@ -31,7 +31,7 @@ def test_user_registration(generate_unique_email):
 
 def test_duplicate_user_registration():
     """Test case for registering an already existing user."""
-    endpoint = f"{BASE_URL}/customers"
+    endpoint = f"{BASE_URL_MAGENTO}/customers"
     existing_email = "testuser@example.com"  # Replace with an actual registered email
 
     payload = {

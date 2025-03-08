@@ -3,8 +3,8 @@ import requests
 import random
 from conftest import BASE_URL
 
-login_endpoint = f"{BASE_URL}/integration/customer/token"
-userdata_endpoint = f"{BASE_URL}/customers/me"
+login_endpoint = f"{BASE_URL_MAGENTO}/integration/customer/token"
+userdata_endpoint = f"{BASE_URL_MAGENTO}/customers/me"
 
 def test_get_user_info_valid():
     payload = {
@@ -19,7 +19,7 @@ def test_get_user_info_valid():
     jwt_token = response.text.strip()
 
     headers = {
-                "Authorization": f"Bearer: {jwt_token}",
+                "Authorization": f"Bearer {jwt_token}",
                 "Content-Type": "application/json"
              }
     

@@ -1,9 +1,7 @@
-import pytest
 import requests
-import random
-from conftest import BASE_URL
+from conftest import BASE_URL_MAGENTO
 
-endpoint = f"{BASE_URL}/integration/customer/token"
+endpoint = f"{BASE_URL_MAGENTO}/integration/customer/token"
 
 def test_user_login():
     payload = {
