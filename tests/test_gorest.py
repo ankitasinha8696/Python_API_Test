@@ -68,8 +68,8 @@ def test_create_user():
               }
 
     payload = {
-                "name":"Anahita Sharma",
-                "email":"sharma_anahita@mosciski.example",
+                "name":"Anamika Sharma",
+                "email":"sharma_anamika@mosciski.example",
                 "gender":"female",
                 "status":"active"
               }
